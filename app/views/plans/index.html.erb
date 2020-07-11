@@ -1,0 +1,42 @@
+<div id="index_container">
+<div id="head">
+<p class="only">MrRoute</p>
+<div id="mypage">
+<%= link_to "マイページ",user_path(id: current_user.id)%>
+</div>
+<div id="logout">
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+</div>
+
+</div>
+
+
+
+<div id="plan_index"> 
+<p>みんなのプラン一覧</p>
+</div>
+
+
+<div id="show_list">
+
+ <ul class="list-wrap">
+ 
+   <% @plans.each do |obj|%>
+
+        <li id="individual" >
+        <a  data-turbolinks="false" href="/plans/<%=obj.id%>">
+
+            <img src="/assets/<%=rand(0..10)%>.jpg" alt="tamshi" width="300" height="150">
+            <p><%=obj.title%></p>
+            </a>
+
+        </li>
+   <% end %> 
+ </ul>
+
+ </div>
+
+
+
+</div>
+

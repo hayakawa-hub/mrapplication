@@ -1,0 +1,29 @@
+.sign_up{
+    text-align: center;
+}
+
+
+.sign_home{
+    margin-top: 50px;
+}
+
+#user_password_confirmation{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.field_password{
+    margin-top: 20px;
+}
+
+.field_password_confirmation{
+    margin-top: 20px;
+}
+
+.sign_home a{
+    color: #007EFF;
+    text-decoration: none;
+
+}

@@ -1,0 +1,281 @@
+<div class="wrapper"></div>
+
+
+
+
+
+<script type="text/javascript">
+
+
+var content =[]
+var placesList=[]
+var totalname=[]
+var totalduration=[]
+var totaldistance=[]
+var totaladdress=[]
+var time1=""
+var time2=""
+var time3=""
+var time4=""
+var time5=""
+var time6=""
+var time=""
+
+
+window.onload=function count1(){
+
+
+
+    
+
+    searchPlace(gon.depature_address,function(results,status){
+        place1 = results[0].geometry.location
+        place4 = results[0].geometry.location
+        console.log(place1.lat())
+        console.log(place1.lng())
+   
+
+
+        searchPlace(gon.stopby_address1,function(results,status){
+             place2 = results[0].geometry.location
+             console.log(place2.lat())
+             console.log(place2.lng())
+
+
+             searchPlace(gon.stopby_address2,function(results,status){
+                  place3 = results[0].geometry.location
+                  console.log(place3.lat())
+                  console.log(place3.lng())
+
+
+                  getRoute(place1,place2,function(response,status){
+                      console.log(response)
+                      
+                      var distance=response.routes[0].legs[0].distance.text;
+                      var duration=response.routes[0].legs[0].duration.text;
+
+
+                      var distandereplaced=distance.replace(',','.');
+                      var distances = parseFloat(distandereplaced);
+                      totaldistance.push(distances);
+
+                      if(duration.includes('h')){
+                          var result= duration.search('h');
+                          var search =result-1;
+                          var hours =  duration.charAt(search);
+                          var min =parseInt(hours);
+                          var mints = min*60;
+                          var result2 = duration.search('min');
+                          var min2 = 0;
+                          min2 = parseInt(duration.substr(result+1,duration.length));
+                          mints += min2;
+                          totalduration.push(mints);
+                      }else{
+                          var mints = parseInt(duration);
+                          totalduration.push(mints);
+                      }
+
+             
+
+
+                      getRoute(place2,place3,function(response,status){
+                          console.log(response.routes[0].legs[0].distance.text)
+                          console.log(response.routes[0].legs[0].duration.text)
+
+                          var distance=response.routes[0].legs[0].distance.text;
+                          var duration=response.routes[0].legs[0].duration.text;
+                
+
+
+                          var distandereplaced=distance.replace(',','.');
+                          var distances = parseFloat(distandereplaced);
+                          totaldistance.push(distances);
+
+                          if(duration.includes('h')){
+
+                              var result= duration.search('h');
+                              var search =result-1;
+                              var hours =  duration.charAt(search);
+                              var min =parseInt(hours);
+                              var mints = min*60;
+                              var result2 = duration.search('min');
+                              var min2 = 0;
+                              min2 = parseInt(duration.substr(result+1,duration.length));
+                              mints += min2;
+                              totalduration.push(mints);
+                          }else{
+                              var mints = parseInt(duration);
+                              totalduration.push(mints);
+                          }
+
+                 
+
+
+                          getRoute(place3,place4,function(response,status){
+                              var distance=response.routes[0].legs[0].distance.text;
+                              var duration=response.routes[0].legs[0].duration.text;
+                         
+
+
+                              var distandereplaced=distance.replace(',','.');
+                              var distances = parseFloat(distandereplaced);
+                              totaldistance.push(distances);
+
+                              if(duration.includes('h')){
+                                  var result= duration.search('h');
+                                  var search =result-1;
+                                  var hours =  duration.charAt(search);
+                                  var min =parseInt(hours);
+                                  var mints = min*60;
+                                  var result2 = duration.search('min');
+                                  var min2 = 0;
+                                  min2 = parseInt(duration.substr(result+1,duration.length));
+                                  mints += min2;
+                                  totalduration.push(mints);
+                              }else{
+                                  var mints = parseInt(duration);
+                                  totalduration.push(mints);
+                           
+                              }
+
+                               example()
+
+
+                            
+                          })
+                      })
+                  })
+             })
+        })
+    })
+}
+
+
+
+
+
+function example(){
+
+    $(function(){
+        time=gon.depature_time
+    
+        var ymd='2020/12/30'
+        var date_format=ymd+' '+time;
+        var timer=new Date(date_format);
+
+        var time1time=timer.toLocaleTimeString();
+        time1=time1time.slice(0,-3)
+
+        timer.setMinutes(timer.getMinutes()+totalduration[0]);
+        var time2time=timer.toLocaleTimeString();
+        time2=time2time.slice(0,-3)
+
+        timer.setMinutes(timer.getMinutes()+60);
+        var time3time=timer.toLocaleTimeString();
+        time3=time3time.slice(0,-3);
+
+        timer.setMinutes(timer.getMinutes()+totalduration[1]);
+        var time4time=timer.toLocaleTimeString();
+        time4=time4time.slice(0,-3);
+
+        timer.setMinutes(timer.getMinutes()+60);
+        var time5time=timer.toLocaleTimeString();
+        time5=time5time.slice(0,-3);
+
+        timer.setMinutes(timer.getMinutes()+totalduration[2]);
+        var time6time=timer.toLocaleTimeString();
+        time6=time6time.slice(0,-3);
+
+
+        var html_string = '<div class="result_container">'
+        html_string +='<h1 class="plan_title">'+gon.title+'</h1>';
+        html_string +='<div class="tl">';
+        html_string +='<div class="tl-content main-bdr">';
+        html_string += '<div class="tl_label">'+time1+' '+'出発！！！'+'</div>';
+        html_string +='<div class="tl_main">車</div>';
+        html_string +='<div class="tl_marker main-bdr main-bc"></div>';
+        html_string +='</div>';
+        html_string +='<div class="tl-content main-bdr">'
+        html_string +='<div class="tl_label">'+time2+'</div>';
+        html_string +='<div class="tl_main">'+gon.stopby_name1+'<br>'+'【住所】'+gon.stopby_address1+'</div>';
+        html_string +='<div class="tl_marker main-bdr main-bc"></div>';
+        html_string +='</div>';
+        html_string +='<div class="tl-content main-bdr">'
+        html_string +='<div class="tl_label">'+time3+'</div>';
+        html_string +='<div class="tl_main">車</div>';
+        html_string +='<div class="tl_marker main-bdr main-bc"></div>';
+        html_string +='</div>';
+        html_string +='<div class="tl-content main-bdr">';
+        html_string +='<div class="tl_label">'+time4+'</div>';
+        html_string +='<div class="tl_main">'+gon.stopby_name2+'<br>'+'【住所】'+gon.stopby_address2+'</div>';
+        html_string +='<div class="tl_marker main-bdr main-bc"></div>';
+        html_string +='</div>';
+        html_string +='<div class="tl-content main-bdr">';
+        html_string +='<div class="tl_label">'+time5+'</div>';
+        html_string +='<div class="tl_main">車</div>';
+        html_string +='<div class="tl_marker main-bdr main-bc"></div>';
+        html_string +='</div>';
+        html_string +='<div class="tl-content main-bdr">';
+        html_string +='<div class="tl_label">'+time6+' '+'到着！！！'+'</div>'
+        html_string +='<div class="tl_marker main-bdr main-bc"></div>';
+        html_string +='</div>';
+        html_string +='</div>';
+        html_string +='</div>';
+
+        html_string +='<div class="flex">';
+
+
+        html_string+='<div id="ichiran">'
+        html_string+='<%= link_to "一覧へ戻る", user_path(id: current_user.id) %>'
+        html_string +='</div>';
+        html_string+='<div id="delete">'
+        html_string+='<a data-confirm="Are you sure?" rel="nofollow" data-method="delete"'+'href="/plans/'+gon.id+'">'+'プランを削除する</a>'
+        html_string+='</div>'
+        html_string+='</div>'
+
+
+
+         $('.wrapper').append(html_string)
+         console.log(gon.id)
+
+
+    });
+}
+
+
+
+
+
+
+//２箇所の時間と距離をだす関数
+function getRoute(from,to,callback){
+  var directionsService = new google.maps.DirectionsService();
+
+
+  
+
+  directionsService.route({
+    origin:from,
+    destination:to,
+    travelMode:google.maps.DirectionsTravelMode.DRIVING,
+  },callback
+  );
+}
+
+
+
+
+
+
+
+function searchPlace(addressInput, callback){
+    console.log(addressInput)
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({address:addressInput}, callback);
+}
+
+
+
+
+
+</script>

@@ -1,0 +1,115 @@
+
+#individual{
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 1px 3px 10px 2px rgba(0,0,0,0.3);
+    color: #000000;
+    width: 300px;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+
+#show_list{
+display: flex;
+justify-content: center;
+}
+
+#individual p{
+    margin: 0;
+}
+
+.list-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+.list-wrap a{
+    color: #000000;
+}
+.list-wrap a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+  
+  .list-wrap li {
+    width: 30%;
+  }
+
+
+ #individual img{
+     border-radius: 3px;
+ }
+ 
+
+ #overflow{
+     overflow: hidden;
+ }
+
+ .float a:hover{
+     text-decoration: none;
+ }
+
+ #make_plan a{
+     display: inline-block;
+     border-radius: 3px;
+     background-color: #0FBFEF;
+     color: #ffffff;
+     text-align: center;
+     margin-top: 30px;
+     width: 80%;
+     padding: 10px;
+ }
+
+ #index_container{
+     text-align: center;
+     position: relative;
+ }
+
+
+ .only{
+    font-family: 'Amatic SC', cursive;
+    border-bottom: 1px solid #0FBFEF;
+    font-size: 1.5rem;
+    color:#0FBFEF ;
+    text-shadow:1px 1px 0 #0000,-1px 1px 0 #0000,1px -1px 0 #0000,-1px -1px 0 #f00;
+    position: relative;
+    margin: 10px;
+    padding: 10px 0 0 0;
+ }
+
+#logout a{
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    border-radius: 3px;
+    background-color:#0FBFEF ;
+    color: #ffffff;
+
+}
+
+#mypage a{
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    border-radius: 3px;
+    background-color:#0FBFEF ;
+    color: #ffffff;
+
+}
+
+#plan_index p{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #0FBFEF;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+    width: 80%;
+    padding: 10px;
+
+}

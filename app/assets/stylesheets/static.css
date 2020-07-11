@@ -1,0 +1,32 @@
+/*----------privacy--------*/
+
+.privacy_container{
+  text-align: center;
+  padding: 40px;
+}
+
+.privacy_content p,ul{
+  text-align: left;
+}
+
+.privacy_content li{
+  list-style-type: square;
+}
+
+.privacy-content ul { padding-left: 0; margin-left: 3em; }
+
+
+
+/*----------terms--------*/
+.terms_container{
+  text-align: center;
+  padding: 40px;
+}
+
+.terms_content p,ul{
+  text-align: left;
+}
+
+.terms_content li{
+  list-style-type: square;
+}

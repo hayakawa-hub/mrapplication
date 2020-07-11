@@ -1,0 +1,114 @@
+#container{
+    display: block;
+    background-color: #0FBFEF;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+   
+}
+
+.label{
+    display: inline-block;
+    color: #ffffff;
+   
+    
+}
+
+#title{
+
+    border:1px solid #ffffff;
+    border-radius: 5px;
+
+    
+}
+
+#depatureTime{
+    border:1px solid #ffffff;
+    border-radius: 5px;
+}
+
+#depaturedAddress{
+    border:1px solid #ffffff;
+    border-radius: 5px;
+
+}
+#todo{
+    border:1px solid #ffffff;
+    border-radius: 5px;
+
+}
+
+#resutaurantCategory{
+    border:1px solid #ffffff;
+    border-radius: 5px;
+
+}
+
+#destinationAddress{
+    border:1px solid #ffffff;
+    border-radius: 5px;
+
+}
+
+#container .title{
+    color:#ffffff;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+    font-family: 'Amatic SC', cursive;
+    text-shadow:1px 1px 0 #0000,-1px 1px 0 #0000,1px -1px 0 #0000,-1px -1px 0 #f00;
+}
+
+.back a{
+    color: #ffffff;
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    z-index: 5;
+}
+
+
+
+#only_search input{
+    width: 80%;
+    border:1px solid #ffff00;
+    border-radius: 5px;
+    background-color: #ffff00;
+    color:#0FBFEF;
+    letter-spacing: 8px;
+    margin-top: 20px;
+    margin-bottom:20px;
+
+}
+
+
+#only_back input{
+    color: #ffffff;
+    border: 1px solid #0FBFEF;
+    border-radius: 3px;
+    background-color:#0FBFEF;
+    margin-left: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.input{
+    margin-top: 25px;
+}
+
+html,body{
+    height:100%;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+
+.flex{
+    display: flex;
+}

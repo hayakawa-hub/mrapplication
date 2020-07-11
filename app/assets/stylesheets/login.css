@@ -1,0 +1,52 @@
+.login{
+    text-align: center;
+}
+
+.alert{
+    text-align: center;
+
+}
+
+.login_home{
+    margin-top: 50px;
+}
+
+.field_password{
+    margin-top: 20px;
+}
+
+.field_remember{
+    margin-top: 20px;
+}
+
+#user_email{
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+}
+#user_password{
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+
+}
+
+.translation_missing{
+    display: inline-block;
+    margin-top: 10px;
+    color: #007EFF;
+}
+.login_home a{
+    color: #007EFF;
+    text-decoration: none;
+
+}
+
+.actions input{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    background-color:#0069d9;
+    border-radius: 5px;
+ 
+}

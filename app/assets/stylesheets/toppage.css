@@ -1,0 +1,276 @@
+@@charset "UTF-8";
+
+
+html body {
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS P ゴシック", "MS P Gothic", Verdana, sans-serif;
+    line-height: 1.6;
+
+}
+
+/*-------header-----------*/
+
+.header h1{
+  margin-top: 60px;
+  margin-top: 20px;
+  margin-top: 0;
+  color:#ffffff;
+font-family: 'Amatic SC', cursive;
+}
+
+.header{
+  text-align: center;
+  padding: 30px;
+
+}
+.header p{
+  line-height: 1.2rem;
+}
+
+.header{
+background: url("/assets/couple1.jpg") no-repeat;
+background-size: cover;
+}
+.header .button a{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: solid 5px #ffffff;
+  border-radius: 20px;
+  width: 200px;
+  color:#ffffff;
+}
+
+.header .introduction{
+  margin-top: 30px;
+    color:#ffffff;
+}
+
+@media only screen and (min-width:651px){
+  .header h1{
+    font-size: 6rem;
+  }
+  
+  .header{
+    background: url("/assets/couple1.jpg") no-repeat;
+    background-size: cover;
+    height: 600px;
+    }
+
+    .introduction{
+      font-size: 1.5rem;
+    }
+
+    .button{
+      font-size: 1.8rem;
+      margin-top: 100px;
+    }
+
+    .button a:hover{
+  
+        background-color: #59b1eb;
+        border-color:#59b1eb ;
+      
+    }
+
+    .head_introduction{
+      margin-top: 60px;
+    }
+
+    .button a{
+      margin-bottom: 20px;
+      display: inline-block;
+      border: solid 5px #ffffff;
+      border-radius: 20px;
+      width: 200px;
+      color:#ffffff;
+      text-decoration: none;
+    }
+
+    .button a:hover{
+      text-decoration: none;
+    }
+   
+}
+/*-------section1-----------*/
+
+.section1{
+  text-align: center;
+  padding: 10px;
+  margin:10px;
+}
+
+.subtitle{
+  margin:0 0 30px;
+  letter-spacing: 1px;
+}
+
+.subtitle::before,
+.subtitle::after{
+  content:'';
+  display: inline-block;;
+  width: 100px;
+  height: 1px;
+  margin:30px 10px;
+  background-color: #000000;
+  vertical-align: middle;
+}
+.section1 .wall{
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+}
+
+
+
+.section1_wrap{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin:10px
+  border-radius: 10px;
+
+    background-color: #f9f9f9;
+    background-image: repeating-linear-gradient(-45deg, #f9f6f6, #f9f6f6 6.5px, transparent 0, transparent 15px);
+}
+
+#trouble{
+  display: inline-block;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+  font-size: 0.9rem;
+  margin:20px;
+  line-height: 1.5rem;
+  padding: 10px;
+  border:1px solid #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 90%;
+}
+
+
+@media only screen and (min-width:651px){
+  .section1 .wall{
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+  .subtitle{
+    font-size: 1.5rem;
+  }
+}
+/*-------section２-----------*/
+
+.section2{
+  text-align: center;
+  padding: 10px;
+  margin:10px;
+}
+
+.subtitle{
+  margin:0 0 30px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width:651px){
+  .section2 .wall{
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+
+  }
+}
+
+
+/*-------section２-----------*/
+.section3{
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  background:radial-gradient(#27444b,#cce4f4);
+
+}
+
+#app_instruciton1 img{
+  width: 80%;
+  border-radius: 6px;
+  margin-top: 30px;
+  
+}
+
+#app_instruciton2 img{
+  width: 80%;
+  border-radius: 6px;
+  margin-top: 30px;
+}
+
+#app_instruciton3 img{
+  width: 80%;
+ 
+  border-radius: 6px;
+  margin-top: 30px;
+}
+
+
+/*--------section3--------*///
+.section3 .sec3_subtitle{
+  margin-top: 20px;
+}
+
+.section3 .sec3_detail{
+margin-top: 50px;
+font-size: 0.9rem;
+line-height: 1.3rem;
+}
+
+.logo img{
+  margin-top: 30px;
+  border-radius: 50%;
+}
+
+.section3 .button a{
+  border:px solid #ffffff;
+  border-radius: 10px;
+  border-radius: 20px;
+  width: 200px;
+  display: inline-block;
+  margin-top: 30px;
+  color: #ffffff;
+
+}
+
+@media only screen and (min-width:651px){
+  .sec3_subtitle{
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+  .section3 .sec3_detail{
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+  }
+}
+
+/*------------section4------*/
+.section4{
+  padding: 40px;
+  color: #ffffff;
+  background:#000000;
+  margin-top: 0;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-around;
+}
+{
+  color: #ffffff;
+}
+.section4 a{
+  color: #ffffff;
+
+}
+
+
+
+.left li{
+  margin: 20px;
+
+}
+
+.right li{
+  margin: 20px;
+
+}
+

@@ -1,0 +1,130 @@
+
+<div class="header">
+      <h1>MrRoute</h1>
+      
+      <div class="head_introduction">
+      <p class="introduction">MrRouteは条件を設定するだけで</p>
+      <p class="introduction">簡単なデートプランを考えてくれる</p>
+      <p class="introduction">プランメイキングアプリです。</p>
+      </div>
+      <div class="button">
+      <% if signed_in? %><%= link_to "START NOW!!!", user_path(current_user) %>
+      <% else %>
+      <%= link_to "START NOW!!!", new_user_session_path %>
+      <% end %>
+      </div>
+</div>
+    <div class="section1">
+      <p class="wall">今度のデートはすごく楽しみ！！<br>
+      だけどこんな心配事ありませんか、、、</p>
+
+      <p class="subtitle">Examples</p>
+
+      <div class="row">  
+      <div class="section1_wrap">
+          
+     
+            <div id="trouble" class="col-xs-12 col-lg-5">
+              <p>急にデートになったけど行き先を<br>
+               どこにすればいいのか分からない</p>
+            </div>
+
+            <div id="trouble" class="col-xs-12 col-lg-5">
+              <p>交際相手にデートプランが悪いと、<br>
+               振られたことがある、、、</p>
+            </div>
+
+
+
+            <div id="trouble" class="col-xs-12 col-lg-5">
+              <p>引っ越して周辺がわからない！<br>
+                でも失敗はできない、、、</p>
+            </div>
+
+             <div id="trouble" class="col-xs-12 col-lg-5">
+                <p>プラン考えるのも疲れてきたな、<br>
+                  今考えたくないな、、、</p>
+             </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="section2">
+
+      <p class="wall">MrRouteで解決しましょう！<br>
+      使い方はとっても簡単！！</p>
+
+
+      <p class="subtitle">CheckIt!!</p>
+      
+      <div class="row">
+      <div id="app_instruciton1" class="col-lg-4 col-xs-12">
+      <%=image_tag 'first.png'%>
+      </div>
+      <div id="app_instruciton2" class="col-lg-4 col-xs-12">
+      <%=image_tag 'second.png'%>
+      </div>
+      <div id="app_instruciton3" class="col-lg-4 col-xs-12">
+      <%=image_tag 'third.png'%>
+      </div>
+  
+
+    </div>
+
+
+    </div>
+
+
+
+    <div class="section3">
+      <p class="sec3_subtitle">デートプランを考える負担を軽減しませんか？</p>
+      <p class="sec3_detail">少しだけでもMrRouteが<br>
+      あなたが自由にできる時間を新たに、<br>
+    作り出すことができるかもしれません。<br>
+      </p>
+
+      <div class="logo">
+      <%=image_tag 'MrRoute.jpg'%>
+      </div>
+      <div class="button">
+      <% if signed_in? %><%= link_to "START NOW!!!", user_path(current_user) %>
+      <% else %>
+      <%= link_to "START NOW!!!", new_user_session_path %>
+      <% end %>
+       </div>
+
+
+    </div>
+
+    <div class="section4">
+      <ul class="left">
+  
+        <li class="copyright">©RyoHayakawa</li>
+        <li class="terms"><a href="/static/terms">利用規約</a><li>
+        <li class="privacy"><a href="/static/privacy">プライバシーポリシー</a></li>
+      </ul>
+
+      <ul class="right">
+       <li class="facebook">
+        <div class="fb-share-button" data-href="https://mrroute.herokuapp.com/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrroute.herokuapp.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+       </li>
+     
+       <li class="line">
+        <a href="http://line.me/R/msg/text/?https://mrroute.herokuapp.com/"><%=image_tag 'line.png',:size => "77x20"%></a>
+       </li>
+     
+       <li class="twitter">
+        <div class="twitter"><a href="//twitter.com/share" class="twitter-share-button" data-text="MrRouteは条件を指定すると自動的にデートプランを作ってくれるWEBサービスです。ご活用ください。" data-url="https://mrroute.herokuapp.com/" data-lang="ja">Tweet</a></div>
+      </li>
+      </ul>
+
+ 
+    </div>
+
+ 
+
+
+
+
