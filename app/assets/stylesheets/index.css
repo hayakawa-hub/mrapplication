@@ -22,6 +22,21 @@ justify-content: center;
     margin: 0;
 }
 
+#individual{
+    position: relative;
+}
+
+.deletebutton{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+
+
+
+
+
 .list-wrap {
     display: flex;
     flex-wrap: wrap;

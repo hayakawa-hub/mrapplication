@@ -20,7 +20,7 @@ Rails.application.routes.draw do
    end
 
 
-   resources :users, only: [:show]
+   resources :users, only: [:show, :destroy]
   resources:plans, only:[:index,:show, :create, :destroy] do
     collection do
       get "search"

@@ -30,6 +30,9 @@
             <p><%=obj.title%></p>
             </a>
 
+            <%= link_to plan_path(obj.id), method: :delete, data: { confirm: '削除しますか？' } do %>
+              <%= image_tag "delete.png" , class:"deletebutton"%>
+            <% end %>
         </li>
    <% end %> 
  </ul>

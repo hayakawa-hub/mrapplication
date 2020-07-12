@@ -228,9 +228,6 @@ function example(){
         html_string+='<div id="ichiran">'
         html_string+='<%= link_to "一覧へ戻る", user_path(id: current_user.id) %>'
         html_string +='</div>';
-        html_string+='<div id="delete">'
-        html_string+='<a data-confirm="Are you sure?" rel="nofollow" data-method="delete"'+'href="/plans/'+gon.id+'">'+'プランを削除する</a>'
-        html_string+='</div>'
         html_string+='</div>'
 
 
